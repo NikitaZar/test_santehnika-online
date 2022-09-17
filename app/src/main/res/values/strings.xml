@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Santehnika-online</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="show_on_map"> Show on Map </string>
+    <string name="confirm_point">Save point?</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="point_not_set">Point is not set</string>
 </resources>

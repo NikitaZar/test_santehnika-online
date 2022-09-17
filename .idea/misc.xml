@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Nikita/Documents/Netology/0_Diploma/Santehnikaonline/app/src/main/res/layout/activity_app.xml" value="0.18802083333333333" />
         <entry key="..\:/Nikita/Documents/Netology/0_Diploma/Santehnikaonline/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
+        <entry key="..\:/Nikita/Documents/Netology/0_Diploma/Santehnikaonline/app/src/main/res/layout/fragment_current_point.xml" value="0.18" />
+        <entry key="..\:/Nikita/Documents/Netology/0_Diploma/Santehnikaonline/app/src/main/res/layout/fragment_map.xml" value="0.18802083333333333" />
       </map>
     </option>
   </component>

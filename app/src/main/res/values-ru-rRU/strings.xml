@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Сантехника Онлайн</string>
+    <string name="show_on_map">Показать на Карте</string>
+    <string name="confirm_point">Сохранить точку?</string>
+    <string name="longitude">Долгота</string>
+    <string name="latitude">Широта</string>
+    <string name="cancel">Отмена</string>
+    <string name="save">Сохранить</string>
+    <string name="point_not_set">Точка не задана</string>
+</resources>
