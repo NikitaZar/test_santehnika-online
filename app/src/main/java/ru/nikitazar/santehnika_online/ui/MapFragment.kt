@@ -2,7 +2,6 @@ package ru.nikitazar.santehnika_online.ui
 
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,9 +19,7 @@ import com.yandex.mapkit.map.PlacemarkMapObject
 import dagger.hilt.android.AndroidEntryPoint
 import ru.nikitazar.santehnika_online.R
 import ru.nikitazar.santehnika_online.databinding.FragmentMapBinding
-import ru.nikitazar.santehnika_online.utils.attachToLifecycle
-import ru.nikitazar.santehnika_online.utils.drawPlacemark
-import ru.nikitazar.santehnika_online.utils.moveToLocation
+import ru.nikitazar.santehnika_online.utils.*
 import ru.nikitazar.santehnika_online.viewModel.PointViewModel
 import java.lang.String.format
 
@@ -69,9 +66,8 @@ class MapFragment : Fragment() {
 
         viewModel.data.observe(viewLifecycleOwner) {
             it?.let { point ->
-                Log.i("mapview", point.latitude.toString())
-                Log.i("mapview", point.longitude.toString())
                 drawPlacemark(point, mapObjects, Color.BLUE)
+                moveToLocation(mapView, point)
             }
         }
 

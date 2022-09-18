@@ -1,13 +1,10 @@
 package ru.nikitazar.santehnika_online.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
-import android.widget.CompoundButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
-import androidx.appcompat.widget.SwitchCompat
 import com.google.android.material.switchmaterial.SwitchMaterial
 import dagger.hilt.android.AndroidEntryPoint
 import ru.nikitazar.santehnika_online.R
