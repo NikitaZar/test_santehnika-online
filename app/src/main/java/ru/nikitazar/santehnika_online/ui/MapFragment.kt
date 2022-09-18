@@ -76,21 +76,23 @@ class MapFragment : Fragment() {
         }
 
         binding.fabDone.setOnClickListener {
-            MaterialAlertDialogBuilder(requireContext())
-                .setTitle(context?.getString(R.string.confirm_point))
-                .setMessage(
-                    "${context?.getString(R.string.latitude)}: ${format(format, viewModel.edited.value.latitude)}\n" +
-                            "${context?.getString(R.string.longitude)}: ${format(format, viewModel.edited.value.longitude)}"
-                )
-                .setNegativeButton(context?.getString(R.string.cancel)) { _, _ ->
-                    lastMapObject?.let {
-                        mapObjects.remove(it)
+            if (lastMapObject != null) {
+                MaterialAlertDialogBuilder(requireContext())
+                    .setTitle(context?.getString(R.string.confirm_point))
+                    .setMessage(
+                        "${context?.getString(R.string.latitude)}: ${format(format, viewModel.edited.value.latitude)}\n" +
+                                "${context?.getString(R.string.longitude)}: ${format(format, viewModel.edited.value.longitude)}"
+                    )
+                    .setNegativeButton(context?.getString(R.string.cancel)) { _, _ ->
+                        lastMapObject?.let {
+                            mapObjects.remove(it)
+                        }
                     }
-                }
-                .setPositiveButton(context?.getString(R.string.save)) { _, _ ->
-                    viewModel.save()
-                    findNavController().navigateUp()
-                }.show()
+                    .setPositiveButton(context?.getString(R.string.save)) { _, _ ->
+                        viewModel.save()
+                        findNavController().navigateUp()
+                    }.show()
+            }
         }
 
         return binding.root
