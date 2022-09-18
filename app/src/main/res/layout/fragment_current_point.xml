@@ -18,41 +18,41 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/point_not_set" />
+    </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lat_layout"
+            android:layout_width="@dimen/space32x"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:layout_margin="@dimen/common_spacing"
+            android:hint="@string/latitude">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/lat_layout"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lat"
                 android:layout_width="@dimen/space32x"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/common_spacing"
-                android:hint="@string/latitude">
+                android:focusable="false" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/lat"
-                    android:layout_width="@dimen/space32x"
-                    android:layout_height="wrap_content"
-                    android:focusable="false" />
-            </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lon_layout"
+            android:layout_width="@dimen/space32x"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_spacing"
+            android:hint="@string/longitude">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/lon_layout"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lon"
                 android:layout_width="@dimen/space32x"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/common_spacing"
-                android:hint="@string/longitude">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/lon"
-                    android:layout_width="@dimen/space32x"
-                    android:layout_height="wrap_content"
-                    android:focusable="false" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
+                android:focusable="false" />
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
 
@@ -72,6 +72,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/bt_remove"
+                style="@style/Widget.AppTheme.IconButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
