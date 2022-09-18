@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/currentPointFragment">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="ru.nikitazar.santehnika_online.ui.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/currentPointFragment"
+        android:name="ru.nikitazar.santehnika_online.ui.CurrentPointFragment"
+        android:label="fragment_current_point"
+        tools:layout="@layout/fragment_current_point" >
+        <action
+            android:id="@+id/action_currentPointFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+</navigation>
