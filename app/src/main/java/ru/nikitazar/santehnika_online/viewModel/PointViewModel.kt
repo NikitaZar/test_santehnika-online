@@ -20,7 +20,6 @@ class PointViewModel @Inject constructor(
 ) : ViewModel() {
 
     val data = repository.data.asLiveData()
-    val empty = Point(-1.0, -1.0)
 
     private val _edited = MutableStateFlow(Point())
     val edited = _edited.asStateFlow()
@@ -30,14 +29,12 @@ class PointViewModel @Inject constructor(
     fun save() = viewModelScope.launch(Dispatchers.IO) {
         mutex.withLock {
             repository.savePoint(_edited.value)
-            _edited.value = empty
         }
     }
 
     fun remove() = viewModelScope.launch(Dispatchers.IO) {
         mutex.withLock {
             repository.removePoint()
-            _edited.value = empty
         }
     }
 
